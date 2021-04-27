@@ -3,7 +3,7 @@ from . import views
 from django.views.generic import TemplateView
 
 # https://docs.djangoproject.com/en/3.0/topics/http/urls/
-app_name='views'
+app_name = 'views'
 urlpatterns = [
     # pre-defined class from Django
     path('', TemplateView.as_view(template_name='views/main.html')),
@@ -18,4 +18,3 @@ urlpatterns = [
     path('main', views.MainView.as_view()),
     path('remain/<slug:guess>', views.RestMainView.as_view()),
 ]
-
